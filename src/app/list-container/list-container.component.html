@@ -1,0 +1,23 @@
+<ul>
+  <li *ngFor="let produceItem of list.items " (click)="deleteProduceItem(produceItem)">
+    {{produceItem.name}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let list of listOfLists ">
+    {{list.name}}
+    <ul>
+      <li *ngFor="let items  of listOfLists.items ">
+        {{items.name}}
+
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+<input [(ngModel)]="produce" #produceNameInput>
+<p>{{produce}}</p>
+
+<button (click)="onAddProduce()">add</button>
